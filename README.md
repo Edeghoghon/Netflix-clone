@@ -44,7 +44,7 @@ Users can sign up or sign in and click on any movie to watch its trailer — all
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/netflix-clone.git
+git clone https://github.com/Edeghoghon/netflix-clone.git
 ```
 
 2. Navigate into the project directory
