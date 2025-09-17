@@ -1,10 +1,12 @@
 .hero {
   position: relative;
   height: 90vh;
+  display: flex;
+  align-items: flex-end;
 }
 .banner-img {
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   mask-image: linear-gradient(to right, transparent, black 75%);
   -weblit-mask-image: linear-gradient(to right, transparent, black 75%);
 }
@@ -12,30 +14,29 @@
 .hero-caption {
   position: absolute;
   padding-left: 6%;
-  bottom: 10%;
-  max-width: 50%;
+  bottom: 0;
+  width: 100%;
 }
 .caption-img {
-  width: 60%;
+  width: 90%;
   max-width: 420px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .hero-caption p {
-  font-size: 15px;
+  font-size: 17px;
   max-width: 700px;
-  margin-top: 0%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hero-btn {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .hero-btn .btn img {
-  width: 18px;
+  width: 25px;
 }
 
 .hero-btn .btn {
@@ -65,67 +66,27 @@
   background: #6d6d6e66;
 }
 
-.first-row {
-  margin-left: 6%;
+.more-cards {
+  padding-left: 6%;
 }
 
-/* Tablets (landscape) */
 @media (max-width: 1024px) {
   .hero {
     height: 70vh;
   }
-  .hero-caption {
-    max-width: 70%;
-    padding-left: 4%;
-    bottom: 8%;
-  }
-  .caption-img {
-    width: 70%;
-    margin-bottom: 20px;
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 768px) {
-  .hero {
-    height: 55vh;
-  }
-  .hero-caption {
-    max-width: 80%;
-    padding-left: 4%;
-    bottom: 5%;
-  }
-  .caption-img {
-    width: 80%;
-    margin-bottom: 15px;
+  .hero-caption .title-cards {
+    display: none;
+    padding-left: 4%; /* Adjust padding for smaller screens */
   }
   .hero-btn {
-    flex-wrap: wrap;
-  }
-  .hero-btn .btn {
-    font-size: 13px;
-    padding: 6px 14px;
-  }
-}
-
-/* Very small screens (less than 480px wide) */
-@media (max-width: 1024px) {
-  .hero {
-    height: 45vh;
-  }
-  .hero-caption {
-    display: none;
-  }
-  .caption-img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .hero-btns {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 800px) {
+  .hero {
+    height: 60vh; /* smaller height on mobile */
+  }
   .hero-caption {
     padding-left: 4%;
   }
@@ -141,20 +102,34 @@
     width: 20px;
   }
   .more-cards {
+    padding: 4%;
+  }
+
+  .hero-caption {
+    bottom: 20px; /* move caption closer to the image bottom */
     padding-left: 4%;
   }
+  .hero-btn {
+    margin-bottom: 10px; /* less gap below buttons */
+  }
 }
-
 @media (max-width: 500px) {
+  .hero {
+    height: auto; /* Let the content define height on very small screens */
+  }
   .caption-img {
     display: none;
   }
-  .hero-btn .btn img {
+  .btn-img {
     width: 15px;
   }
-  .hero-btn.btn {
+  .btn {
     padding: 4px 10px;
-    gap: 5x;
+    gap: 5px;
     font-size: 10px;
+  }
+  .hero-caption {
+    bottom: 10px; /* push caption down even more on very small screens */
+    padding-left: 4%;
   }
 }
