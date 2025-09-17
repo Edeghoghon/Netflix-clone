@@ -7,8 +7,8 @@ import instagram_icon from "../../assets/instagram_icon.png"; // Add other icons
 
 const Footer = () => {
   return (
-    <div className="Footer">
-      <div className="Footer-icons">
+    <div className="footer">
+      <div className="footer-icons">
         <img src={youtube_icon} />
         <img src={facebook_icon} />
         <img src={twitter_icon} />
