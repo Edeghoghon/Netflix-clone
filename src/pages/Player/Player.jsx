@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Player.css"; // Assuming you have a CSS file for styling
-import back_arrow_icon34 from "../../assets/back_arrow_icon34.png"; // Adjust the path as necessary
+import "./Player.css";
+import back_arrow_icon34 from "../../assets/back_arrow_icon34.png";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Player = () => {
